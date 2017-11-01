@@ -23,7 +23,7 @@ language: en
 
 
 The articles in this first issue of *sx archipelagos* attend to the
-myriad opportunities and concerns that inform the Caribbean digital---its
+various chances and concerns that inform the Caribbean digital---its
 spaces, methodologies, and imaginations---as praxis and as historicized
 societal phenomenon. Contributors propose critical perspectives on the
 challenges and opportunities presented by media technologies that
