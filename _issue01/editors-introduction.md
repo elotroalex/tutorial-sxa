@@ -22,7 +22,7 @@ language: en
 ---
 
 
-The articles in this first issue of *sx archipelagos* attend to the
+The articles in this inaugural issue of *sx archipelagos* attend to the
 various chances and concerns that inform the Caribbean digital---its
 spaces, methodologies, and imaginations---as praxis and as historicized
 societal phenomenon. Contributors propose critical perspectives on the
