@@ -1,0 +1,21 @@
+<!-- _includes/image.html -->
+<!-- _includes/interactive.html -->
+
+<!-- YouTube -->
+{% if include.type == "youtube" %}
+<div class="image-wrapper" >   
+    {% if include.url %}
+    <a href="{{ include.url }}" title="{{ include.title }}" target="_blank">
+    {% endif %}
+        <img src="{{ site.baseurl }}/images/{{ include.img }}" alt="{{ include.title }}"/>
+    {% if include.url %}
+    </a>
+    {% endif %}
+
+</div>
+    {% if include.caption %}
+<span class="caption">{{include.caption}}</span>
+    {% endif %}
+{% endif %}
+
+

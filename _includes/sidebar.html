@@ -1,0 +1,30 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+         styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">    
+
+    <!-- Toggleable sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-item">
+        {% if page.layout != "article" %}
+        <p><em>sx archipelagos</em>—a small axe platform for digital practice—is part of the <a href="http://smallaxe.net/" target="_blank">Small Axe Project</a>.<br></p>
+        {% else %}
+
+        <h1 class="article-title">{{page.title["long"]}}</h1>
+        <p>{% include author-loop.html %}</p>
+        <p>Issue ({{page.issue}}) | {{ page.date | date: '%B %Y'}} <br>DOI: {{ page.doi }}</p>
+
+        {% endif %}
+      </div>
+      <nav class="main-nav">
+      <a class="sidebar-nav-item" href="{{ site.baseurl }}/index.html">Home</a>  
+        {% assign pages_list = site.pages | sort:"url" %}
+        {% for node in pages_list %}{% if node.title != null AND node.title != "Menu" %}{% if node.layout == "page" %}<a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}">{{ node.title }}</a>
+        {% endif %}{% endif %}{% endfor %}
+    </nav>
+
+
+      <div class="sidebar-footer">
+        <p>&copy; {{ site.time | date: '%Y' }}. Small Axe, Inc. This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Source documents can be found on our <a href="{{ site.githuburl }}">repository</a></p>
+        <p>ISSN: {{ site.issn }}</p>
+      </div>
+    </div>

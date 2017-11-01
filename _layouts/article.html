@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="article">
+		  <h1 class="page-title">{{ page.title["long"]   | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+		  <p class="byline">{% assign document = page %}{% include author-loop.html %}</p>
+		  <br>
+		  {% if page.abstract %}  
+		<h4>Abstract</h4>
+		<p class="abstract">{{page.abstract}}</p>
+		<br><hr><br>
+		  {% endif %}
+		  {{ content }}
+		</div>
+
+      {% include bios.html %}
+
+		
+		<hr>
+
+		<div class="footer">
+			<ul id="footer-nav">
+				<li><a href="#">Return to top</a></li>
+				{% if site.current-number == page.issue %}
+				<li> | </li>
+				<a href="{{site.baseurl}}/">Return to Table of Contents</a>
+				{% else %}
+				{% endif %}
+
+			</ul>
+		</div>

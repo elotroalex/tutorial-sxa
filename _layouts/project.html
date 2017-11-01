@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="project">
+  <h1 class="page-title">{{ page.title["long"] }}</h1>
+  <a href="{{ page.link }}">
+  	<img class="project-image" alt="project image" src="{{site.baseurl}}/{{ page.image }}"/>
+  </a>
+  {{ content }}
+  {% include bios.html %}
+</div>
+
+<div class="footer">
+      <ul id="footer-nav">
+        <li><a href="#">Return to top</a></li>
+        {% if site.current-number == page.issue %}
+        <li> | </li>
+        <a href="{{site.baseurl}}/">Return to Table of Contents</a>
+        {% else %}
+        {% endif %}
+      </ul>
+</div>
